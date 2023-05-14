@@ -7,9 +7,9 @@ const port = 3000
 export const chatGptController = async (_req: Request, res: Response) => {
   const text = _req.params.text;
 
-  const result = await chatGptService(text);
+  const result = await chatGptService("私は今日何を食べるべきですか？");
 
   return res.status(200).send({
-    message: 'Hello World!' + result,
+    message: result,
   })
 };
