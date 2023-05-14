@@ -7,7 +7,7 @@ export const chatGptService = async (text: string): Promise<string | undefined> 
     const prompt = await readFile(require('app-root-path') + '/prompts/prompt.md', { encoding: "utf8" })
         .then(file => file);
 
-    // プロンプトにユーザ情報を設定
+    // プロンプトに質問を設定
     const userPrompt = prompt.replace('{#QUESTION}', text);
 
     console.log(userPrompt);
