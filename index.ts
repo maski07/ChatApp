@@ -1,6 +1,5 @@
 import express, { Application, Request, Response } from 'express'
 import { chatGptController } from './src/controller/chatGptController'
-import path from 'path';
 
 const app: Application = express()
 const PORT = 3000
